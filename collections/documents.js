@@ -4,7 +4,7 @@ SimpleSchema.extendOptions(['autoform']);
  
 export const Documents = new Mongo.Collection('documents');
 
-DocumentsSchema = new SimpleSchema({
+Documents.attachSchema(new SimpleSchema({
   clientname: {
     label: "Client Name",
     type: String,
@@ -14,7 +14,9 @@ DocumentsSchema = new SimpleSchema({
   	label: "Client Age",
     type: Number,
   },
-});
+
+},
+{ tracker: Tracker }));
 
 // <template name="saveDocument">
 //   {{> quickForm collection="Documents" id="saveDocument" type="insert"}}
