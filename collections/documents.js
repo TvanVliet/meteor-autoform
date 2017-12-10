@@ -7,12 +7,11 @@ export const Documents = new Mongo.Collection('documents');
 DocumentsSchema = new SimpleSchema({
   clientname: {
     label: "Client Name",
-    "name":"name",
     type: String,
     max: 100
   },
   clientage: {
-  	label: "Author",
+  	label: "Client Age",
     type: Number,
   },
 });
