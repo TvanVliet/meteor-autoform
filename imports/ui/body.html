@@ -17,9 +17,12 @@
       </form>
       <button type="submit" form="form1" value="Submit">Save</button> -->
 
-     <template name="saveDocument">
-   {{> quickForm collection="Documents" id="saveDocument" type="insert"}}
- </template>
 
+ 
+  {{> saveDocument}}
   </div>
 </body>
+
+    <template name="saveDocument">
+   {{> quickForm collection="Documents" id="saveDocument" type="insert"}}
+ </template>
