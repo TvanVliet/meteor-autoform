@@ -4,7 +4,6 @@ SimpleSchema.extendOptions(['autoform']);
  
 export const Documents = new Mongo.Collection('documents');
 
-
 // Creating the data schema
 Documents.attachSchema(new SimpleSchema({
   clientname: {
@@ -16,6 +15,5 @@ Documents.attachSchema(new SimpleSchema({
   	label: "Client Age",
     type: Number,
   },
-
 },
 { tracker: Tracker }));
